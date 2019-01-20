@@ -26,17 +26,23 @@ sf = np.random.random((2, 3))  # 创建随机数的数组
 print('sa:{}\nsb:{}\nsc:{}\nsd:{}\nse:{}\nsf:{}'.format(sa, sb, sc, sd, se, sf))
 
 # ### NumPy
+# NumPy（数值 Python 的简称）是用Python实现的用于科技计算的基础软件包，是一个强大的科学分析和建模工具
+# - 提供了大量数据结构，能够轻松地执行多维数组和矩阵运算
+# - 可用作不同类型通用数据的多维容器
+# - 可以和其他编程语言无缝集成
+# - 可以简单而快速地与大量数据库和工具结合
+#
+# ### 官网信息
 # - HomePage：http://www.numpy.org/
 # - Manual：https://docs.scipy.org/doc/numpy/
 # - User Guide：https://docs.scipy.org/doc/numpy/user/
 # - Reference：https://docs.scipy.org/doc/numpy/reference/generated/
-# - Python语言实现的用于科技计算的基础软件包，也可用作高效的通用数据的多维容器，能够无缝和高效的集成到多种类型的数据库中；
 #
 # ### 基础属性与数组创建
 # NumPy的基础是一个同构的多维数据，数组中的元素可以通过下标来索引。
 # 在NumPy中，维度称之为axis（复数是axes），维度的数量称之为rank。
 #
-# # 数组类ndarray
+# ### 数组类ndarray
 # Docs：https://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html
 # NumPy的数组类是ndarray，别名numpy.array，具有以下的属性：
 # - ndarray.ndim：数组的维数，称之为rank

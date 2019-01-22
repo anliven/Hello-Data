@@ -15,6 +15,13 @@ minus_one = np.dot(matrix_one, -1)  # 通过dot函数进行矩阵的乘法
 print("minus_one = \n{}\n".format(minus_one))
 print("np.dot(base_data, minus_one) = \n{}\n".format(np.dot(base_data, minus_one)))
 
+# 从坐标向量返回坐标矩阵
+x = np.arange(1, 4)  # 生成一维数组，也就是向量
+y = np.arange(201, 205)
+print(x, y)
+a, b = np.meshgrid(x, y)  # #将两个一维数组变为二维矩阵：将x变成了矩阵a的行向量，y变成了矩阵b的列向量
+print("a:\n{}\nb:\n{}".format(a, b))
+
 # ### 矩阵
 # Docs：https://docs.scipy.org/doc/numpy/reference/generated/numpy.matrix.html
 #
@@ -24,3 +31,7 @@ print("np.dot(base_data, minus_one) = \n{}\n".format(np.dot(base_data, minus_one
 #
 # # 矩阵的乘法
 # numpy.dot：https://docs.scipy.org/doc/numpy/reference/generated/numpy.dot.html
+#
+# # 从坐标向量返回坐标矩阵
+# numpy.meshgrid：https://docs.scipy.org/doc/numpy/reference/generated/numpy.meshgrid.html
+# meshgrid函数可以从一个坐标向量中返回一个坐标矩阵，可简单理解为互相由对方数据的数量来确定尺寸;

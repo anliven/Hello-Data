@@ -26,6 +26,6 @@ plt.show()
 # plot函数可用来绘制线性图；
 # 详细信息及示例：https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html
 #
-# ### 散点图（matplotlib.pyplot.scatt）
+# ### 散点图（matplotlib.pyplot.scatter）
 # scatt函数可用来绘制散点图；
 # 详细信息及示例：https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html

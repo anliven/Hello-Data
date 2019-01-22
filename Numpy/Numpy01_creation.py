@@ -26,17 +26,19 @@ sf = np.random.random((2, 3))  # 创建随机数的数组
 print('sa:{}\nsb:{}\nsc:{}\nsd:{}\nse:{}\nsf:{}'.format(sa, sb, sc, sd, se, sf))
 
 # ### NumPy
+# HomePage：http://www.numpy.org/
 # NumPy（数值 Python 的简称）是用Python实现的用于科技计算的基础软件包，是一个强大的科学分析和建模工具
 # - 提供了大量数据结构，能够轻松地执行多维数组和矩阵运算
 # - 可用作不同类型通用数据的多维容器
 # - 可以和其他编程语言无缝集成
 # - 可以简单而快速地与大量数据库和工具结合
 #
-# ### 官网信息
+# ### 文档信息
 # - HomePage：http://www.numpy.org/
 # - Manual：https://docs.scipy.org/doc/numpy/
 # - User Guide：https://docs.scipy.org/doc/numpy/user/
 # - Reference：https://docs.scipy.org/doc/numpy/reference/generated/
+# - Function Index：https://docs.scipy.org/doc/numpy/genindex.html
 #
 # ### 基础属性与数组创建
 # NumPy的基础是一个同构的多维数据，数组中的元素可以通过下标来索引。

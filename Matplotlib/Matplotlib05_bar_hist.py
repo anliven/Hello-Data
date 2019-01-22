@@ -21,9 +21,11 @@ plt.legend()  # 指定图例
 plt.show()
 
 # ### 条形图（matplotlib.pyplot.bar）
+# 条形图常常用来描述一组数据的对比情况；
 # bar函数可用来绘制条形图；
 # 详细信息及示例：https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html
 #
 # ### 直方图（matplotlib.pyplot.hist）
+# 直方图描述了数据中某个范围内数据出现的频度：
 # hist函数可用来绘制直方图；
 # 详细信息及示例：https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html

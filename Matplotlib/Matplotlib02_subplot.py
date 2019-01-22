@@ -11,7 +11,7 @@ plt.subplot(2, 2, 2)  # 作为2行2列图形矩阵中的第2个subplot
 plt.plot(data2)
 
 data3 = np.arange(200, 301)
-plt.subplot(223)  # 如果三个整数都在10之内，可以合并为一个整数
+plt.subplot(223)  # 作为2行2列图形矩阵中的第3个subplot（如果三个整数都在10之内，可以合并为一个整数）
 plt.plot(data3)
 
 data4 = np.arange(300, 401)

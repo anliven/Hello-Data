@@ -46,6 +46,7 @@ print("\nbase_data4 = \n{}\n".format(base_data4))
 print("np.log(base_data4)): ", np.log(base_data4))  # 返回对数数组
 print("np.exp(base_data4)): ", np.exp(base_data4))  # 返回指数数组
 print("np.sqrt(base_data4)): ", np.sqrt(base_data4))  # 返回开方数组
+print("np.power(base_data4, 3)): ", np.power(base_data4, 3))  # 返回3次方数组
 
 # ### 随机数
 # Docs：https://docs.scipy.org/doc/numpy/reference/routines.random.html

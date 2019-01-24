@@ -29,7 +29,6 @@ plt.show()  # 显示图表
 
 # ### 访问数据
 # 以Python的dict/list方式访问DataFrame数据
-# 文档: http://pandas.pydata.org/pandas-docs/stable/indexing.html
 cities = pd.DataFrame({'City name': city_names, 'Population': population})
 print(type(cities['City name']), type(cities[0:2]), type(cities['City name'][1]))
 print(cities)
@@ -50,14 +49,11 @@ cities['wide_saint'] = (cities['Area square miles'] > 50) \
 print(cities)
 
 # ### 索引
-# 文档：http://pandas.pydata.org/pandas-docs/stable/indexing.html#index-objects
 # Series和DataFrame对象定义了index属性，该属性会向每个Series项或DataFrame行赋一个标识符值
 # 默认情况下，在构造时，pandas会赋可反映源数据顺序的索引值
 # 索引值在创建后是稳定的，不会因为数据重新排序而发生改变
 print(city_names.index)
 print(cities.index)
-# reindex方法
-# 文档：http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.reindex.html
 print(cities.reindex([2, 0, 1]))  # 调用DataFrame.reindex来手动重新排列各行的顺序
 cities.reindex(np.random.permutation(cities.index))  # 将cities.index传递至NumPy的random.permutation函数，随机排列其值的位置
 print(cities)
@@ -66,12 +62,16 @@ print(cities.reindex([0, 4, 5, 2]))
 
 # ### Pandas
 # - HomePage : http://pandas.pydata.org/
-# - Docs : http://pandas.pydata.org/pandas-docs/stable/index.html
 # - 针对Python语言的开源数据分析处理工具，可以提供高性能、易用的数据结构；
+#
+# ### 官网文档
+# - Docs: http://pandas.pydata.org/pandas-docs/stable/index.html
+# - Function Index：http://pandas.pydata.org/pandas-docs/stable/genindex.html
+# - API：http://pandas.pydata.org/pandas-docs/stable/api.html
+# - Tutorials：http://pandas.pydata.org/pandas-docs/stable/tutorials.html
+# - 10 Minutes to pandas：http://pandas.pydata.org/pandas-docs/stable/10min.html
+# - Cookbook：http://pandas.pydata.org/pandas-docs/stable/cookbook.html
 #
 # ### 主要数据结构
 # - DataFrame: 数据框架是用于数据操控的一种常用抽象实现形式，可以理解为一个关系型数据表格，其中包含多个行和已命名的列。
 # - Series: 单一列。DataFrame 中包含一个或多个 Series，每个 Series 均有一个名称。
-#
-# ### 原文链接
-# https://colab.research.google.com/notebooks/mlcc/intro_to_pandas.ipynb

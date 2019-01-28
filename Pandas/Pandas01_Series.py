@@ -8,7 +8,9 @@ print("series1.index: {}".format(series1.index))  # 打印Series的索引
 
 series2 = pd.Series([4, 5, 6], index=["D", "Five", 666])  # 创建时指定索引
 print("Series2:\n{}".format(series2))
-print("Five is {}".format(series2["Five"]))
+print("Five is {}".format(series2["Five"]))  # 类似数组的访问数据方式
+# print("Five is {}".format(series2.Five))  # 类似属性的访问方式，不建议此方式
+# print("666 is {}".format(series2.666))  # 类似属性的访问方式要求索引元素必须是有效的Python标识符，否则将报错
 
 series3 = pd.Series(["1st", "2nd", "3rd"], index=[1, 2, 2])  # 索引并非集合，可以包含重复的数据
 print("Series3:\n{}".format(series3))

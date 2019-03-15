@@ -1,15 +1,17 @@
 # coding=utf-8
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
+import numpy as np  # NumPy是一种用于进行科学计算的常用工具包
 
 print("version: ", pd.__version__)
 
 # ### 显示设置
 # 默认情况下，如果DataFrame的行列数量太多，print将只显示部分内容
-pd.set_option('display.max_columns', None)  # 显示所有列
-pd.set_option('display.max_rows', None)  # 显示所有行
-pd.set_option('max_colwidth', 100)  # 设置value的显示长度为100，默认为50
+pd.set_option('display.max_rows', None)  # 显示的最大行数，None表示显示所有行
+pd.set_option('display.max_columns', None)  # 显示的最大列数， None表示显示所有列
+pd.set_option('display.width', 200)  # 显示宽度（以字符为单位）
+pd.set_option('max_colwidth', 100)  # 列长度，默认为50
+pd.set_option('expand_frame_repr', False)  # 是否换行显示，False表示不允许， True表示允许
 
 # ### 基本概念
 city_names = pd.Series(['San Francisco', 'San Jose', 'Sacramento'])  # 构建Series对象
@@ -43,8 +45,11 @@ print(population.apply(lambda val: val > 1000000))  # 创建一个population是�
 # 使用Series.apply进行复杂的单列转换，Series.apply将以参数形式接受 lambda 函数，而该函数会应用于每个值
 cities['Area square miles'] = pd.Series([46.87, 176.53, 97.92])  # 向现有DataFrame添加Series
 cities['Population density'] = cities['Population'] / cities['Area square miles']  # 添加Series
+print(cities)
+
+# 练习
 cities['wide_saint'] = (cities['Area square miles'] > 50) \
-                                       & cities['City name'].apply(lambda name: name.startswith('San'))  # 添加Series
+                       & cities['City name'].apply(lambda name: name.startswith('San'))  # 添加Series
 # 注意：布尔值Series是使用“按位”而非传统布尔值“运算符”组合的，因此执行逻辑与时，应使用&，而不是and
 print(cities)
 
@@ -57,11 +62,13 @@ print(cities.index)
 print(cities.reindex([2, 0, 1]))  # 调用DataFrame.reindex来手动重新排列各行的顺序
 cities.reindex(np.random.permutation(cities.index))  # 将cities.index传递至NumPy的random.permutation函数，随机排列其值的位置
 print(cities)
+
+# ### 练习
 # reindex方法允许使用未包含在原始DataFrame索引值中的索引值，reindex会为此类“丢失的”索引添加新行，并在所有对应列中填充NaN值
 print(cities.reindex([0, 4, 5, 2]))
 
 # ### Pandas
-# - HomePage : http://pandas.pydata.org/
+# - HomePage: http://pandas.pydata.org/
 # - 针对Python语言的开源数据分析处理工具，可以提供高性能、易用的数据结构；
 #
 # ### 官网文档
